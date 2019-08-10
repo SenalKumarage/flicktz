@@ -1,0 +1,16 @@
+{
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "files.exclude": {
+        "**/node_modules": true,
+        "dist/": true,
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#093428",
+        "titleBar.activeBackground": "#0C4938",
+        "titleBar.activeForeground": "#F0FCF9"
+    },
+    "html.format.wrapAttributes": "force-aligned"
+}
