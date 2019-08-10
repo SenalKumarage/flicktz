@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlicktzCommonModule } from 'src/common';
+import { HomeViewComponent } from './views';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeViewComponent
   ],
   imports: [
     BrowserModule,
