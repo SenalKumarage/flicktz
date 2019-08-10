@@ -1,0 +1,6 @@
+<div class="flicktz-loader">
+    <ng-content></ng-content>
+    <div class="flicktz-loader__overlay flicktz-loader__overlay--positionned" [ngStyle]="{'z-index':customOverlayZIndex}" *ngIf="loadingAnimation">
+        <div class="flicktz-loader-spinner"></div>
+    </div>
+</div>
