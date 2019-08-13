@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FlicktzCommonModule } from 'src/common';
 import { HomeViewComponent } from './views';
 import { GalleryModule } from 'src/features/gallery/gallery.module';
+import { ImageDataService } from './services/image-data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,14 @@ import { GalleryModule } from 'src/features/gallery/gallery.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FlicktzCommonModule,
     GalleryModule
   ],
-  providers: [],
+  providers: [
+    ImageDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
