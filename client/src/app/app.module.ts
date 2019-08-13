@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlicktzCommonModule } from 'src/common';
 import { HomeViewComponent } from './views';
+import { GalleryModule } from 'src/features/gallery/gallery.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HomeViewComponent } from './views';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FlicktzCommonModule
+    FlicktzCommonModule,
+    GalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
