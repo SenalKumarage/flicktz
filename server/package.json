@@ -1,0 +1,24 @@
+{
+  "name": "flicktz-server",
+  "version": "1.0.0",
+  "description": "Express api for flicktz application",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "express.",
+    "flickr"
+  ],
+  "author": "Senal Kumarage",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
