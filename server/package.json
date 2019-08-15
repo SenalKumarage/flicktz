@@ -4,11 +4,12 @@
   "description": "Express api for flicktz application",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
   },
   "keywords": [
     "node.js",
-    "express.",
+    "express",
     "flickr"
   ],
   "author": "Senal Kumarage",
