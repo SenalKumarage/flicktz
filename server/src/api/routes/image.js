@@ -1,4 +1,5 @@
 const express = require('express');
+const ImageService = require('../../services/image');
 
 const route = express.Router();
 
@@ -8,10 +9,14 @@ const route = express.Router();
 module.exports = (app) => {
 
     console.log('starting image api');
+    const imageServiceInstance = new ImageService();
 
     app.use('/public-feed', route);
 
     app.get('/public-feed', (req, res) => {
-        res.send('Hello world');
+
+        let { response, body } = imageServiceInstance.getPublicFeed();
+
+        res.send(body);
     })
 }
