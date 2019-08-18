@@ -7,7 +7,8 @@ import { FlicktzCommonModule } from 'src/common';
 import { HomeViewComponent } from './views';
 import { GalleryModule } from 'src/features/gallery/gallery.module';
 import { ImageDataService } from './services/image-data.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RequestInterceptorService } from './services/request-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,11 @@ import { HttpClientModule } from '@angular/common/http';
     GalleryModule
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestInterceptorService,
+      multi: true
+    },
     ImageDataService
   ],
   bootstrap: [AppComponent]
