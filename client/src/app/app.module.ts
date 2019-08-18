@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { NgxMasonryModule } from 'ngx-masonry';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlicktzCommonModule } from 'src/common';
@@ -18,6 +20,7 @@ import { RequestInterceptorService } from './services/request-interceptor.servic
   imports: [
     BrowserModule,
     HttpClientModule,
+    NgxMasonryModule,
     AppRoutingModule,
     FlicktzCommonModule,
     GalleryModule

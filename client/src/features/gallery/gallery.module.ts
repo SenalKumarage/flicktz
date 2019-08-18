@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GalleryComponent } from './gallery.component';
+import { NgxMasonryModule } from 'ngx-masonry';
 
 
 
@@ -9,7 +10,8 @@ import { GalleryComponent } from './gallery.component';
     GalleryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgxMasonryModule
   ],
   exports: [
     GalleryComponent

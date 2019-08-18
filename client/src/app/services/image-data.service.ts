@@ -33,6 +33,8 @@ export class ImageDataService {
     return this.http.get<any[]>(url);
   }
 
+  private parseImage() {}
+
 }
 
 export interface FlicktzImage {

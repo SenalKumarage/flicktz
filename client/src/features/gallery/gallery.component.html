@@ -1,5 +1,8 @@
 <div class="gallery">
-  <div class="gallery__image" *ngFor="let item of data" [ngStyle]="{'backgroundImage': 'url(' + item.thumbnail + ')'}">
-  </div>
+  <ngx-masonry [options]="masonryOptions" [useImagesLoaded]="true">
+    <div ngx-masonry-item *ngFor="let picture of data" class="masonry-item">
+      <img src="{{picture.fullImage}}">
+    </div>
+  </ngx-masonry>
 </div>
 
