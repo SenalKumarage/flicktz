@@ -13,10 +13,10 @@ module.exports = (app) => {
 
     app.use('/public-feed', route);
 
-    app.get('/public-feed', (req, res) => {
+    app.get('/public-feed', async (req, res) => {
 
-        let { response, body } = imageServiceInstance.getPublicFeed();
+        let data = await imageServiceInstance.getPublicFeed();
 
-        res.send(body);
+        res.send(data);
     })
 }
