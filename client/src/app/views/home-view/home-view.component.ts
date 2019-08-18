@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ImageDataService } from 'src/app/services/image-data.service';
+import { ImageDataService, FlicktzImage } from 'src/app/services/image-data.service';
 
 @Component({
   selector: 'app-home-view',
@@ -8,13 +8,15 @@ import { ImageDataService } from 'src/app/services/image-data.service';
 })
 export class HomeViewComponent implements OnInit {
 
+  public imageData: FlicktzImage[];
+
   constructor(private imageService: ImageDataService) { }
 
   ngOnInit() {
 
     this.imageService.getPublicFeed()
       .subscribe(r => {
-        console.log(typeof r);
+        this.imageData = r;
       });
   }
 

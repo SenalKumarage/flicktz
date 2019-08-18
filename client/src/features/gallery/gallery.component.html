@@ -1,1 +1,5 @@
-gallery works
+<div class="gallery">
+  <div class="gallery__image" *ngFor="let item of data" [ngStyle]="{'backgroundImage': 'url(' + item.thumbnail + ')'}">
+  </div>
+</div>
+
