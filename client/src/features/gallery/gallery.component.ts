@@ -20,7 +20,6 @@ export class GalleryComponent implements OnChanges {
 
     if (changes['data']) {
         this.data = changes['data'].currentValue;
-        console.log(this.data);
     }
   }
 
