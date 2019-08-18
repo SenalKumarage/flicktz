@@ -20,6 +20,8 @@ module.exports = {
 
     api: {
 
-        prefix: '/flicktz/api'
-    }
+        prefix: '/api'
+    },
+
+    flickrApi: process.env.FLICKR_API_KEY
 };

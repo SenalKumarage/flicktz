@@ -15,7 +15,7 @@ const startServer = async () => {
             return;
         }
 
-        console.log('Server running...');
+        console.log(`Server running on port ${config.port} ...`);
     })
 }
 
