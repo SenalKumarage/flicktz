@@ -1,8 +1,5 @@
 <div class="gallery">
-  <ngx-masonry [options]="masonryOptions" [useImagesLoaded]="true">
-    <div ngx-masonry-item *ngFor="let picture of data" class="masonry-item">
-      <img src="{{picture.fullImage}}">
-    </div>
-  </ngx-masonry>
+  <div *ngFor="let picture of data" class="gallery__item">
+    <img class="gallery__item--img" src="{{picture.thumbnail}}">
+  </div>
 </div>
-

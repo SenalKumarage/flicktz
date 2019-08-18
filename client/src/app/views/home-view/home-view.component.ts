@@ -10,14 +10,32 @@ export class HomeViewComponent implements OnInit {
 
   public imageData: FlicktzImage[];
 
+  public isLoading = false;
+
   constructor(private imageService: ImageDataService) { }
 
   ngOnInit() {
 
+    this.isLoading = true;
+
     this.imageService.getPublicFeed()
       .subscribe(r => {
+
+        this.isLoading = false;
         this.imageData = r;
       });
+  }
+
+  public onSearchImages(ev) {
+
+    this.isLoading = true;
+
+    this.imageService.search(ev)
+    .subscribe(r => {
+
+      this.isLoading = false;
+      this.imageData = r;
+    });
   }
 
 }

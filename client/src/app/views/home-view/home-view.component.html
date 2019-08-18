@@ -1,10 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <a class="navbar-brand" href="#">flicktz</a>
-  <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand brand-txt" href="#">flicktz</a>
+  <div class="search-form ml-auto">
+    <app-search (searchImages)="onSearchImages($event)"></app-search>
+  </div>
 </nav>
-<div>
-  <app-gallery [data]="imageData"></app-gallery>
+<div class="container-fluid gallery-container">
+  <app-loader [loading]="isLoading">
+    <app-gallery [data]="imageData"></app-gallery>
+  </app-loader>
+
 </div>

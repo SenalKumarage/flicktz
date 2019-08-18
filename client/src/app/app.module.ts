@@ -11,6 +11,8 @@ import { GalleryModule } from 'src/features/gallery/gallery.module';
 import { ImageDataService } from './services/image-data.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RequestInterceptorService } from './services/request-interceptor.service';
+import { SearchModule } from 'src/features/search/search.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import { RequestInterceptorService } from './services/request-interceptor.servic
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     NgxMasonryModule,
     AppRoutingModule,
     FlicktzCommonModule,
-    GalleryModule
+    GalleryModule,
+    SearchModule
   ],
   providers: [
     {

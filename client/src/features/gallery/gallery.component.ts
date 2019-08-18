@@ -10,13 +10,8 @@ import { NgxMasonryOptions } from 'ngx-masonry';
 export class GalleryComponent implements OnChanges {
 
   public masonryOptions: NgxMasonryOptions = {
-		transitionDuration: '0.2s',
-		gutter: 20,
-		// resize: true,
-		// initLayout: true,
-    // fitWidth: true,
-    // columnWidth: 200,
-    // itemSelector: '.grid-item'
+
+    columnWidth: 'auto'
 	};
 
   @Input() public data: FlicktzImage[];
