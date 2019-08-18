@@ -1,39 +1,21 @@
-const request = require('request');
-const bodyParser = require('body-parser');
+const request = require("request-promise");
 
 const imageService = class ImageService {
 
     async getPublicFeed() {
         console.log('Getting public feed');
 
-        // Set the headers
-        let headers = {
-            'Content-Type': 'application/json'
-        }
-
         // Configure the request
         let options = {
-            url: 'https://api.flickr.com/services/feeds/photos_public.gne?format=json',
+            url: 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1',
             method: 'GET',
-            headers: headers
+            json: true
         }
 
-        return await request(options,
-            (error, response, body) => {
-                if (error) return error;
+        const data =  await request(options);
 
-                console.log(typeof body);
-                function jsonFlickrFeed(data) {
-
-                    console.log(data);
-                }
-                return { body, response };
-            })
+        return data.items;
     }
-
-
 }
-
-
 
 module.exports = imageService;
