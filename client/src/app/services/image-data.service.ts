@@ -8,8 +8,6 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class ImageDataService {
 
-  private baseUrl = '';
-
   constructor(private http: HttpClient) {
   }
 
@@ -32,8 +30,6 @@ export class ImageDataService {
 
     return this.http.get<any[]>(url);
   }
-
-  private parseImage() {}
 
 }
 

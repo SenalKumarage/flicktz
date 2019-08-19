@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { NgxMasonryModule } from 'ngx-masonry';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlicktzCommonModule } from 'src/common';
@@ -23,7 +21,6 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    NgxMasonryModule,
     AppRoutingModule,
     FlicktzCommonModule,
     GalleryModule,

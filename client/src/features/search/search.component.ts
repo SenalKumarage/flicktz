@@ -1,6 +1,9 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
+/**
+ * This will emit the user's search ter by separating tags from commas
+ */
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -12,16 +15,16 @@ export class SearchComponent {
 
   public searchForm;
 
-  constructor( private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder) {
 
     this.searchForm = this.formBuilder.group({
       text: ''
     });
   }
 
-  onSubmit(searchData) {
+  public onSubmit(searchData) {
 
-    let searchTags = searchData.text.split(' ');
+    const searchTags = searchData.text.split(' ');
 
     this.searchImages.emit(searchTags.toString());
   }

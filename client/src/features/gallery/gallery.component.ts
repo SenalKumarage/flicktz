@@ -1,7 +1,9 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { FlicktzImage } from 'src/app/services/image-data.service';
-import { NgxMasonryOptions } from 'ngx-masonry';
 
+/**
+ * This is responsible to display an array of images on a grid
+ */
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
@@ -9,17 +11,15 @@ import { NgxMasonryOptions } from 'ngx-masonry';
 })
 export class GalleryComponent implements OnChanges {
 
-  public masonryOptions: NgxMasonryOptions = {
-
-    columnWidth: 'auto'
-	};
-
+  // Gallery image data
   @Input() public data: FlicktzImage[];
 
   ngOnChanges(changes: SimpleChanges) {
 
+    // tslint:disable-next-line:no-string-literal
     if (changes['data']) {
-        this.data = changes['data'].currentValue;
+      // tslint:disable-next-line:no-string-literal
+      this.data = changes['data'].currentValue;
     }
   }
 
