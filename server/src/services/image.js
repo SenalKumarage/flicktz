@@ -19,7 +19,7 @@ const imageService = class ImageService {
     async getPublicFeed() {
 
         let options = {
-            url: 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1',
+            url: 'https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1&safe_search=1',
             method: 'GET',
             json: true
         }
@@ -37,7 +37,8 @@ const imageService = class ImageService {
     async searchByString(searchTerm) {
 
         const searchRes = await this.flickr.photos.search({
-            tags: searchTerm
+            tags: searchTerm,
+            safe_search : 1 
         });
 
         return this.parseSearchResult(searchRes.body);
