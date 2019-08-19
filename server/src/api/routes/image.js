@@ -13,7 +13,6 @@ module.exports = (app) => {
 
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(bodyParser.json());
-
     const imageServiceInstance = new ImageService();
 
     // This will return the public feed of flickr api
