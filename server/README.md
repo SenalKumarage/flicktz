@@ -7,4 +7,6 @@ Express api
     ```javascript
     NODE_ENV=development
     PORT=3000
+    FLICKR_API_KEY=XXXXXXXXXXXXXXXXXXXXX
     ```
+
