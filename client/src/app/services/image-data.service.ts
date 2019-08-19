@@ -26,9 +26,15 @@ export class ImageDataService {
    */
   public search(tags: string): Observable<FlicktzImage[]> {
 
-    const url = `api/search?text=${tags}`;
+    if(tags && tags !== '') {
+      const url = `api/search?text=${tags}`;
 
-    return this.http.get<any[]>(url);
+      return this.http.get<any[]>(url);
+    } else {
+
+      return this.getPublicFeed();
+    }
+
   }
 
 }
