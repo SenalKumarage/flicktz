@@ -10,3 +10,10 @@ Express api
     FLICKR_API_KEY=XXXXXXXXXXXXXXXXXXXXX
     ```
 
+### API Documentation
+
+Find the api documentation [here.](https://github.com/SenalKumarage/flicktz/blob/develop/server/API_DOC.md)
+
+### Running unit tests
+
+Run `npm test` to execute unit tests via jest framework.
