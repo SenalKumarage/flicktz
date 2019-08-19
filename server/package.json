@@ -4,7 +4,8 @@
   "description": "Express api for flicktz application",
   "main": "src/server.js",
   "scripts": {
-    "test": "env-cmd .env jest --watch",
+    "test": "jest --detectOpenHandles",
+    "test:watch": "jest --watch",
     "start": "node src/server.js"
   },
   "jest": {

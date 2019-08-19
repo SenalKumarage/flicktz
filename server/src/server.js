@@ -1,9 +1,8 @@
 const express = require('express');
 const config = require('./config');
+const app = express();
 
 const startServer = async () => {
-
-    const app = express();
 
     // This will load all the loaders
     await require('./loaders')(app);
@@ -16,7 +15,9 @@ const startServer = async () => {
         }
 
         console.log(`Server running on port ${config.port} ...`);
-    })
+    });
 }
 
 startServer();
+
+module.exports = app;

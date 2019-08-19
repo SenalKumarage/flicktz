@@ -13,7 +13,7 @@ module.exports = (app) => {
 
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(bodyParser.json());
-    
+
     const imageServiceInstance = new ImageService();
 
     // This will return the public feed of flickr api
@@ -29,10 +29,12 @@ module.exports = (app) => {
     // TODO: Implement pagination
     app.get('/search', async (req, res) => {
 
-        
-        let text = req.query.text;
-        let data = await imageServiceInstance.searchByString(text);
-
-        res.send(data);
+        if (req.query.text) {
+            let text = req.query.text;
+            let data = await imageServiceInstance.searchByString(text);
+            res.send(data);
+        } else {
+            res.status(400).send({ status: 400, message: 'Parameter text is not present' });
+        }
     })
 }
