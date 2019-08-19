@@ -17,3 +17,9 @@ Find the api documentation [here.](https://github.com/SenalKumarage/flicktz/blob
 ### Running unit tests
 
 Run `npm test` to execute unit tests via jest framework.
+
+### Server
+
+Server is hosted in an ec2 instance in the following url.
+
+host: ec2-18-218-129-235.us-east-2.compute.amazonaws.com
