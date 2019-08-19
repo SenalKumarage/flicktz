@@ -1,5 +1,6 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, TemplateRef } from '@angular/core';
 import { FlicktzImage } from 'src/app/services/image-data.service';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 
 /**
  * This is responsible to display an array of images on a grid
@@ -11,8 +12,14 @@ import { FlicktzImage } from 'src/app/services/image-data.service';
 })
 export class GalleryComponent implements OnChanges {
 
+  public modalRef: BsModalRef;
+
+  public currentImage: FlicktzImage;
+
   // Gallery image data
   @Input() public data: FlicktzImage[];
+
+  constructor(private modalService: BsModalService) {}
 
   ngOnChanges(changes: SimpleChanges) {
 
@@ -21,6 +28,11 @@ export class GalleryComponent implements OnChanges {
       // tslint:disable-next-line:no-string-literal
       this.data = changes['data'].currentValue;
     }
+  }
+
+  public openModal(template: TemplateRef<any>, img: FlicktzImage) {
+    this.modalRef = this.modalService.show(template);
+    this.currentImage = img;
   }
 
 }

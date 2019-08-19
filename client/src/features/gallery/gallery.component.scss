@@ -16,3 +16,14 @@
     }
   }
 }
+
+.gallery__item:hover {
+
+  cursor: pointer;
+  box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.2), 0 12px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+::ng-deep .modal-content {
+  background: transparent;
+  border:none;
+}
